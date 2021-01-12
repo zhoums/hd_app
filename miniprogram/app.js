@@ -13,7 +13,9 @@ App({
         traceUser: true,
       })
     }
-
+    wx.cloud.callFunction({
+      name: 'echo'
+    }).then(console.log)
     this.globalData = {}
   }
 })
